@@ -8,6 +8,9 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.enums import TA_LEFT
 from k9_texto import accent
+from k9_laminas import REGISTRY
+from reportlab.graphics import renderPDF
+from reportlab.platypus import Flowable
 from k9_identidad import furniture, REPO_URL, AUTHOR, cover_asset
 NAVY='#12334d'; CYAN='#087f99'; GREEN='#237252'; ORANGE='#a64d12'
 # Precios: asignaciones de planeacion, no cotizaciones ni precios observados.
@@ -88,9 +91,18 @@ def build(root,project):
   t=Table(a,colWidths=widths or [512/len(rows[0])]*len(rows[0]),repeatRows=1,hAlign='LEFT')
   t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#deedf2')),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor('#f4f7f9')]),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),7),('RIGHTPADDING',(0,0),(-1,-1),7),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),5),('LINEBELOW',(0,0),(-1,0),.8,colors.HexColor(CYAN))]));story.append(t);story.append(Spacer(1,9))
  def fig(name,caption,width=512):
-  from PIL import Image as PI
-  path=P/'Diagramas'/(name+'.png');w,hh=PI.open(path).size
-  story.append(Image(str(path),width=width,height=hh*width/w,hAlign='LEFT'))
+  width=512  # Las etiquetas se imprimen al tamaño diseñado; no miniaturas.
+  if name in REGISTRY:
+   drawing=REGISTRY[name]
+   class VectorFigure(Flowable):
+    def __init__(self):Flowable.__init__(self);self.width=width;self.height=drawing.height*width/drawing.width
+    def draw(self):
+     self.canv.saveState();self.canv.scale(width/drawing.width,width/drawing.width);renderPDF.draw(drawing,self.canv,0,0);self.canv.restoreState()
+   story.append(VectorFigure())
+  else:
+   from PIL import Image as PI
+   path=P/'Diagramas'/(name+'.png');w,hh=PI.open(path).size
+   story.append(Image(str(path),width=width,height=hh*width/w,hAlign='LEFT'))
   story.append(Paragraph(accent(caption),styles['small']));story.append(Spacer(1,5))
  def checklist(items):
   note(' / '.join(items),'Verificacion')
@@ -108,7 +120,7 @@ def build(root,project):
   p('<b>Objetivo.</b> '+goal);h('Lo que aprenderemos');p(learn)
   h('Materiales y punto de partida');p(materials)
   p(f'Conservar H{n-1} y agregar H{n}.' if n>1 else 'Comenzar con la placa desconectada y construir H1.')
-  fig('14_laboratorio' if n==5 else '13_led_boton' if n==1 else f'H{n}_conexiones',f'Figura P{n}. Mismas redes que en hardware; cables por terminal, sin escala fisica.')
+  fig('08_estados' if n==5 else '13_led_boton' if n==1 else f'H{n}_conexiones',f'Figura P{n}. '+('Secuencia de observacion y comparacion.' if n==5 else 'Mismas redes que en hardware; esquema funcional, no huella fisica.'))
   table([['Red','Conexion'],*({'1':[['LED','10 -> 330 ohm -> LED -> GND'],['Boton','3 -> pulsador -> GND']],'2':[['Datos / reloj','4 -> SDA; 5 -> SCL'],['Energia / direccion','3V3 -> VCC; GND -> GND y AD0']],'3':[['Relojes / datos','6 -> SCK; 7 -> WS; 1 <- SD'],['Canal / energia','L/R -> GND; VDD -> 3V3; GND comun']],'4':[['Medida','Nodo S1 -> 150k -> GPIO0 -> 100k -> GND'],['Filtro','100nF: GPIO0 a GND; PILAS=false en USB']],'5':[['Conservar','GPIO 10,3,4,5,6,7,1,0 segun H1-H4'],['Energia','Sensores 3V3; USB o pilas validadas']]}[str(n)])],[90,422])
  # outputs CSV and budget
  headers=['Grupo','Componente','Cantidad','Especificacion','Funcion','MXN_unitario_planeacion_no_cotizado','Busqueda_Mercado_Libre','Practica']
@@ -129,7 +141,7 @@ def build(root,project):
  p(f'<link href="{REPO_URL}" color="{CYAN}">{REPO_URL}</link>')
  p('<b>Hecho por el profesor Francisco López Velázquez.</b><br/><link href="https://zolvek.com.mx" color="'+CYAN+'">zolvek.com.mx</link>')
  note('Cinco practicas acumulativas. Pruebas en mesa o peluche, sin perros. La deteccion experimental no diagnostica ni trata miedo.','Alcance')
- p('<b>Edicion 2.0 · Identidad editorial Zolvek · Tamaño carta.</b>')
+ p('<b>Edicion 3.0 · Identidad editorial Zolvek · Tamaño carta.</b>')
 
  page('Antes de conectar')
  p('Construiremos un registrador de eventos. Un microfono transforma cambios de presion del aire en muestras digitales. Un sensor inercial mide aceleracion y giro. El ESP32-C3 busca un impulso acustico, compara actividad antes y despues y comunica una categoria experimental.')
@@ -205,7 +217,7 @@ def build(root,project):
 
  page('H3 · El sonido se convierte en numeros')
  p('El INMP441 es un microfono MEMS digital: una membrana responde a cambios de presion y la electronica interna produce muestras. No se conecta al ADC. I2S transmite el flujo con reloj de bits (SCK/BCLK), seleccion de ranura (WS) y datos (SD). Es distinto de I2C: SDA/SCL consultan registros; I2S entrega audio continuo.')
- fig('09_sonidos','Figura 7. Ejemplos sinteticos de envolventes, no registros ni firmas de clasificacion. La escala de cada ejemplo es relativa.')
+ fig('09_sonidos','Figura 7. Señal impulsiva sintetica, con ejes de tiempo y amplitud. No es un registro real ni identifica el origen.')
  p('<b>Amplitud</b>: tamaño de la muestra. <b>Pico</b>: mayor valor absoluto de una ventana. <b>RMS</b>: raiz de la media de los cuadrados, una medida de intensidad sostenida. <b>Duracion</b>: tiempo por encima del umbral. <b>Tono</b>: percepcion ligada a periodicidad; <b>frecuencia</b>: ciclos por segundo. Un aplauso tiene ataque rapido y decaimiento corto; un trueno puede durar mas, pero reverberacion, distancia y grabacion alteran ambos.')
  p('Un portazo, una explosion de pirotecnia y un aplauso pueden generar impulsos de banda ancha. El prototipo solo marca eventos sospechosos. No reconoce con certeza su origen y no mide dB SPL sin calibracion acustica. Los valores normalizados son relativos a escala digital, no a la salud auditiva.')
 
@@ -240,6 +252,8 @@ def build(root,project):
  page('H5 · Del cableado a la maqueta')
  fig('14_laboratorio','Figura 10. Circuito completo de laboratorio: USB como unica alimentacion; divisor solo si se ensaya H4 con entrada aislada.')
  table([['Conexion integrada','Terminales'],['Alerta / control','10 -> 330 ohm -> LED -> GND; 3 -> boton -> GND'],['MPU6050','4 SDA, 5 SCL, 3V3 VCC, GND GND/AD0'],['INMP441','6 SCK, 7 WS, 1 SD +100k a GND; 3V3 VDD, GND GND/LR'],['Medida opcional H4','0 al divisor 150k/100k; 100nF nodo-GND'],['Energia','USB; pack retirado. AAA solo con autorizacion tecnica de H4']],[130,382])
+ page('H5 · Revisar el montaje')
+ fig('06_montaje','Distribucion mecanica para una maqueta: separar energia y sensores, fijar el MPU6050 y dejar libre el puerto acustico.')
  p('Probar primero en protoboard. Si la SuperMini tapa los agujeros vecinos, usar dos protoboards o extensiones; no doblar patas para forzarla. Pasar a placa perforada solo despues de comprobar cada red por continuidad. Mantener cables I2S cortos, GND firme y sensores separados de cables del motor. El MPU debe quedar sujeto para que mida el objeto y no un modulo colgando.')
  p('Usar caja aislante, alivio de tension y conectores polarizados. Dejar la antena libre de metal y las AAA separadas de puntos calientes. No sellar con pegamento el microfono. La propuesta de pechera solo se monta en una maqueta o peluche: peso, temperatura, humedad, bordes, desprendimientos y bienestar animal requieren validacion independiente.')
 
@@ -290,11 +304,13 @@ def build(root,project):
  table([['Modulo / variable','Interpretacion y comprobacion'],['iniciarIMU()','Define 4/5, limita espera I2C y escanea. Falla sin bloquear todo el programa.'],['movimiento()','Cada 20 ms obtiene a,g,t; si getEvent falla, no actualiza historial.'],['magnitud','Norma de aceleracion: cerca de 9.81 en reposo.'],['giro','Norma de velocidad angular: cerca de cero quieto, aumenta al rotar.'],['actividad','Desviacion de la norma respecto a gravedad, suavizada. LED AUTO si >0.7.'],['historial / ultimoIMU','Conservan 100 lecturas para P5 y tiempo de ultima lectura valida.']],[140,372])
  note('Sin IMU el programa continua con boton y mensajes; no interpretar act=0 como reposo valido. Revisar “MPU AUSENTE” y volver a encender una vez reparado el cableado.','Precaucion')
 
+ p('Abrir Herramientas > Serial Plotter a 115200 para comparar las etiquetas numericas. No abrir Monitor y Plotter simultaneamente si el puerto queda ocupado. La consola se imprime a 4 Hz para mantener legibilidad, pero el sensor se consulta a 50 Hz: la grafica serie no conserva todos los picos. Para analizar frecuencia usar registros mas rapidos y quitar texto extra, sin cambiar el periodo de muestreo.')
+
  page('P2 · Medir, comparar y registrar')
  fig('10_movimiento','Figura 13. Actividad simulada antes y despues de un evento; no es una medicion de un perro.',width=360)
  p('1. Dejar el modulo fijo y quieto 5 s. Registrar a, giro y act. 2. Inclinar lentamente 90 grados sin golpear: los componentes cambian, la norma debe seguir cerca de 9.81. 3. Mover el objeto adelante y atras unas dos veces por segundo; observar picos. 4. Girarlo suavemente sin trasladarlo; comparar actividad y giro. No lanzar ni golpear sensores.')
  table([['Ensayo','Esperado','Registrar'],['Mesa fija','a ~ 9.81; giro pequeño; act baja','Promedio y variacion'],['Inclinacion lenta','Norma casi constante','Por qué un eje solo confunde'],['Sacudida moderada','Actividad sube; LED en AUTO','Valor maximo y tiempo'],['Giro suave','Giro sube aun con act baja','Limitacion de la magnitud']],[110,235,167])
- p('Abrir Herramientas > Serial Plotter a 115200 para comparar las etiquetas numericas. No abrir Monitor y Plotter simultaneamente si el puerto queda ocupado. La consola se imprime a 4 Hz para mantener legibilidad, pero el sensor se consulta a 50 Hz: la grafica serie no conserva todos los picos. Para analizar frecuencia usar registros mas rapidos y quitar texto extra, sin cambiar el periodo de muestreo.')
+
  h('Si algo falla')
  p('Sin 0x68: verificar GND, SDA/SCL intercambiados y AD0. 0x69 significa otra seleccion de direccion; volver AD0 a GND. Datos constantes: comprobar que el modulo realmente se mueve. Valores extremos fijos sugieren saturacion, alimentacion incorrecta o datos invalidos. Un cable suelto puede parecer un movimiento brusco.')
  h('Actividad de analisis')

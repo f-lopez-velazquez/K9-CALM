@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="512" height="109" preserveAspectRatio="xMinYMin meet" viewBox="0 0 512 109" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="512" height="109"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-109)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="12" y="95" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,190) scale(1,-1)">MISMA LECTURA / cambia el umbral, no el movimiento</text>
+			<text x="13" y="63" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,126) scale(1,-1)">act = 0.50</text>
+			<path d="M 81,67 L 121,67 Z" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="121 67, 116.6121 64.60287, 116.6121 69.39713" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 0.3; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<rect x="121" y="54" width="168" height="26" rx="3" ry="3" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<text x="177.1045" y="63" style="font-family: Helvetica; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,126) scale(1,-1)">¿0.50 &gt; 0.70?</text>
+			<path d="M 289,67 L 338,67 Z" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="338 67, 333.6121 64.60287, 333.6121 69.39713" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 0.3; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<text x="306.0" y="75" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,150) scale(1,-1)">NO</text>
+			<circle cx="357" cy="67" r="7" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="375" y="63" style="font-family: Helvetica; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,126) scale(1,-1)">LED apagado</text>
+			<text x="13" y="16" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,32) scale(1,-1)">act = 0.50</text>
+			<path d="M 81,20 L 121,20 Z" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="121 20, 116.6121 17.60287, 116.6121 22.39713" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 0.3; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<rect x="121" y="7" width="168" height="26" rx="3" ry="3" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<text x="177.1045" y="16" style="font-family: Helvetica; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,32) scale(1,-1)">¿0.50 &gt; 0.30?</text>
+			<path d="M 289,20 L 338,20 Z" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="338 20, 333.6121 17.60287, 333.6121 22.39713" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 0.3; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<text x="308.22" y="28" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,56) scale(1,-1)">SÍ</text>
+			<circle cx="357" cy="20" r="7" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<text x="375" y="16" style="font-family: Helvetica; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,32) scale(1,-1)">LED encendido</text>
+		</g>
+	</g>
+</svg>

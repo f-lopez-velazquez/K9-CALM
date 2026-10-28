@@ -1,20 +1,31 @@
 # 03 · Detectar un sonido
 
-Encender una alerta al detectar un sonido brusco, conservando el movimiento.
+Escucha un sonido moderado y compara su lectura con el ambiente.
 
-[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo para abrir](../Codigo/03_Sonido/03_Sonido.ino)
+[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo](../Codigo/03_Sonido/03_Sonido.ino)
 
-## 1. Conecta sin USB
+## A · Conecta y comprueba
 
-| Terminal | Conexión |
+Con USB retirado: INMP441, 100 kohm de SD a GND y desacoplo si falta. Conserva P2.
+
+![Circuito](../Diagramas/H3_conexiones.png)
+
+| Desde | Conecta hasta |
 | --- | --- |
-| Conserva P2 | No cambies los cables anteriores. |
-| INMP441 | VDD -> 3V3; GND y L/R -> GND; SCK -> 6; WS -> 7; SD -> 1 |
-| Resistencia de SD | 100 kohm entre SD y GND; desacoplo 100 nF si falta en módulo. |
+| VDD / GND / L/R | 3V3 / GND / GND |
+| SCK / WS | GPIO6 / GPIO7 |
+| SD | GPIO1 y resistencia 100 kohm a GND |
+| 100 nF, si falta en módulo | Entre VDD y GND, cerca del micrófono |
 
-## 2. Copia todo o abre el archivo
+El micrófono ya entrega números digitales. SCK y WS son relojes; SD lleva los datos al C3. rms resume la amplitud en una ventana: no es una medida de dB.
 
-Borra el programa anterior del editor. Usa un solo sketch.
+L/R a GND elige el canal izquierdo, que es el que lee el código. No confundas SD del audio con SDA del acelerómetro. No tapes el orificio del micrófono.
+
+**Comprobación:** Mide VDD-GND: cerca de 3.3 V. Después del arranque, habla suave y verifica que rms y pico cambien. Un reloj I2S no se comprueba con una lectura fija del multímetro.
+
+## B · Copia el programa completo
+
+Abre el archivo o borra el editor y pega todo. No lo agregues debajo del código anterior.
 
 ```cpp
 // Hecho por el profesor Francisco López Velázquez.
@@ -41,32 +52,43 @@ void loop() {
 }
 ```
 
-## 3. Qué hace cada cosa
-
-| Código | Qué hace |
+| Línea o función | Qué hace |
 | --- | --- |
-| ajustarSonido(...) | Fija el mínimo de sonido para la prueba. |
-| iniciar(3) | Agrega el micrófono digital al montaje anterior. |
-| impulso() | Responde sí durante la detección de un sonido brusco. |
-| alertar(ALERTA_MS) | Mantiene la luz por ese tiempo sin detener sensores. |
+| ajustarSonido(UMBRAL_SONIDO) | Configura el mínimo de amplitud antes de iniciar. |
+| aula.impulso() | Pregunta si se detectó un sonido brusco en esta vuelta. |
+| if (...) { alertar(...); } | Si hubo impulso, guarda una alerta de duración definida. |
+| actualizar() / encender() | Sigue leyendo ambos sensores; no usa delay para sostener la luz. |
 
-## 4. Haz la prueba
+### Ejemplo antes de probar
 
-1. Sube P3 y espera 3 s con ambiente tranquilo.
-2. Habla suave: rms y pico cambian. No deben quedar en cero siempre.
-3. Reproduce una palmada grabada a volumen moderado; espera 3 s entre intentos.
-4. Mueve el objeto: act sigue cambiando. El botón conserva AUTO/MANUAL.
+| Caso | Cómo se interpreta |
+| --- | --- |
+| Ejemplo de ambiente | rms = 0.001; pequeño frente al mínimo 0.004 |
+| Ejemplo de sonido brusco | rms = 0.012; puede activar si cumple las otras condiciones |
 
-## 5. Cambia un valor y vuelve a subir
+## C · Observa, predice y cambia
 
-| Valor | Cambio | Qué observar |
-| --- | --- | --- |
-| UMBRAL_SONIDO | 0.004 -> 0.008 | Sube el mínimo: puede detectar menos eventos. |
-| UMBRAL_SONIDO | 0.004 -> 0.002 | Baja el mínimo; el filtro de ruido también influye. |
-| ALERTA_MS | 1000 -> 1500 | La luz de alerta dura 1.5 s. |
+1. **Aprende el ambiente.** Sube P3 y espera 3 s. Habla suave: rms y pico deben variar. MIC:1 solo confirma datos recientes, no audio correcto.
+2. **Reproduce el sonido.** Usa una palmada grabada a volumen moderado. Espera 3 s entre intentos. La alerta dura 1 s si detecta un impulso.
+3. **Conserva lo anterior.** Mueve el objeto y observa act. El LED también puede encender por movimiento; deja el objeto quieto para probar solo sonido.
 
-**Si falla:** ¿rms siempre cero? Revisa SD=1 y L/R=GND. ¿pico cerca de 1 siempre? Baja volumen y revisa conexiones. rms no representa dB.
+Fragmentos ilustrativos de salida; tus números pueden variar:
 
-![Diagrama de la práctica](../Diagramas/H3_conexiones.png)
+```text
+modo:1 a:9.81 giro:0.02 act:0.10 IMU:1
+rms:0.00100 pico:0.00300 MIC:1
+```
 
-SCK y WS son relojes; SD trae el audio digital. I2S ya viene configurado en la biblioteca de aula.
+### Cambia UMBRAL_SONIDO
+
+| Prueba | Qué comparar |
+| --- | --- |
+| 0.008 | Sube el mínimo: puede detectar menos |
+| 0.004 | Valor de partida |
+| 0.002 | Baja el mínimo: comprueba falsas alertas |
+
+El detector también considera ruido de fondo, ataque y pico/RMS. Superar 0.004 no garantiza una alerta. Después cambia ALERTA_MS=1500: solo debe durar más la luz.
+
+**Si falla:** Audio siempre cero: revisa L/R a GND y SD=1. Pico cerca de 1 permanentemente: baja volumen y revisa formato/cables. Evita sonidos fuertes.
+
+**Registra:** cambié ___; predije ___; observé ___. Avanza cuando puedas repetirlo y explicar por qué cambió la salida.

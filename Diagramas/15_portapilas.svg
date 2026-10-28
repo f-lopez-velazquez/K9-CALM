@@ -1,1 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420"><rect width="100%" height="100%" fill="white"/><text x="25" y="35" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#12334d" text-anchor="start">Portapilas 3 AAA + interruptor: identificar polaridad</text><rect x="70" y="75" width="430" height="245" rx="8" fill="#343d48" stroke="#12334d" stroke-width="2"/><rect x="100" y="100" width="330" height="45" rx="8" fill="#d3d9dd" stroke="#12334d" stroke-width="2"/><rect x="430" y="112" width="12" height="20" rx="8" fill="#c8b060" stroke="#12334d" stroke-width="2"/><text x="115" y="130" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#12334d" text-anchor="start">-</text><text x="400" y="130" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#12334d" text-anchor="start">+</text><text x="250" y="130" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#12334d" text-anchor="middle">AAA 1.5 V</text><rect x="100" y="165" width="330" height="45" rx="8" fill="#d3d9dd" stroke="#12334d" stroke-width="2"/><rect x="430" y="177" width="12" height="20" rx="8" fill="#c8b060" stroke="#12334d" stroke-width="2"/><text x="115" y="195" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#12334d" text-anchor="start">-</text><text x="400" y="195" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#12334d" text-anchor="start">+</text><text x="250" y="195" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#12334d" text-anchor="middle">AAA 1.5 V</text><rect x="100" y="230" width="330" height="45" rx="8" fill="#d3d9dd" stroke="#12334d" stroke-width="2"/><rect x="430" y="242" width="12" height="20" rx="8" fill="#c8b060" stroke="#12334d" stroke-width="2"/><text x="115" y="260" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#12334d" text-anchor="start">-</text><text x="400" y="260" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#12334d" text-anchor="start">+</text><text x="250" y="260" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#12334d" text-anchor="middle">AAA 1.5 V</text><text x="90" y="350" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="start">En serie: las tensiones se suman.</text><text x="90" y="380" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#12334d" text-anchor="start">Medir polaridad real; no confiar solo en colores.</text><line x1="500" y1="130" x2="580" y2="130" stroke="#d45454" stroke-width="3"/><rect x="580" y="95" width="150" height="70" rx="8" fill="#eef4f6" stroke="#12334d" stroke-width="2"/><text x="655" y="125" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#12334d" text-anchor="middle">F1 + D1</text><text x="655" y="150" font-family="DejaVu Sans,sans-serif" font-size="15" fill="#12334d" text-anchor="middle">Protección</text><line x1="730" y1="130" x2="800" y2="130" stroke="#d45454" stroke-width="3"/><circle cx="800" cy="130" r="5" fill="#cda552"/><line x1="800" y1="130" x2="855" y2="95" stroke="#d45454" stroke-width="3"/><circle cx="870" cy="130" r="5" fill="#cda552"/><line x1="870" y1="130" x2="955" y2="130" stroke="#d45454" stroke-width="3"/><text x="810" y="190" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#12334d" text-anchor="start">S1 / SPST</text><text x="785" y="230" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="start">Al nodo Ventrada</text><line x1="500" y1="280" x2="955" y2="280" stroke="#344b59" stroke-width="3"/><text x="795" y="308" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#12334d" text-anchor="start">GND común</text><text x="545" y="365" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="start">No es cargador. No recargar alcalinas.</text><text x="545" y="395" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="start">USB retirado al conectar el portapilas.</text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="512" height="180" preserveAspectRatio="xMinYMin meet" viewBox="0 0 512 180" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="512" height="180"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-180)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="18" y="40" width="178" height="102" rx="3" ry="3" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="31" y="109" width="149" height="18" rx="3" ry="3" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="44" y="115" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,230) scale(1,-1)">AAA</text>
+			<text x="167.08" y="115" style="font-family: Helvetica; font-size: 10px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,230) scale(1,-1)">+</text>
+			<rect x="31" y="83" width="149" height="18" rx="3" ry="3" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="44" y="89" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,178) scale(1,-1)">AAA</text>
+			<text x="168.335" y="89" style="font-family: Helvetica; font-size: 10px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,178) scale(1,-1)">-</text>
+			<rect x="31" y="57" width="149" height="18" rx="3" ry="3" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="44" y="63" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,126) scale(1,-1)">AAA</text>
+			<text x="167.08" y="63" style="font-family: Helvetica; font-size: 10px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,126) scale(1,-1)">+</text>
+			<text x="61.473499999999994" y="23" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,46) scale(1,-1)">B1 / 3 celdas en serie</text>
+			<polyline points="196 119, 237 119" style="stroke: rgb(65%,32%,15%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<text x="216" y="132" style="font-family: Helvetica; font-size: 9px;fill: rgb(65%,32%,15%); stroke:none;" transform="translate(0,264) scale(1,-1)">+</text>
+			<path d="M 237,119 L 249,119 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="249" y="114" width="28" height="10" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 277,119 L 289,119 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="258.332" y="139" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,278) scale(1,-1)">F1</text>
+			<text x="255.0" y="128" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,256) scale(1,-1)">PTC</text>
+			<path d="M 289,119 L 315,119 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 315,119 L 328,119 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="328 127, 328 111, 344 119" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 345,128 L 345,110 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 345,119 L 359,119 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="331.888" y="143" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,286) scale(1,-1)">D2</text>
+			<text x="321.66" y="132" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,264) scale(1,-1)">Schottky</text>
+			<path d="M 359,119 L 395,119 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<circle cx="395" cy="119" r="2" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="420" cy="119" r="2" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 397,121 L 416,131 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 422,119 L 492,119 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="406" y="145" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,290) scale(1,-1)">S2</text>
+			<text x="459.536" y="134" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,268) scale(1,-1)">Ventrada</text>
+			<polyline points="196 61, 492 61" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<text x="474.224" y="70" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,140) scale(1,-1)">GND</text>
+			<text x="229" y="29" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,58) scale(1,-1)">Conector polarizado + tapa + aislamiento</text>
+			<text x="12" y="3" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,6) scale(1,-1)">Representación de conexiones. No recargar pilas alcalinas ni conectar USB y pack a la vez.</text>
+		</g>
+	</g>
+</svg>

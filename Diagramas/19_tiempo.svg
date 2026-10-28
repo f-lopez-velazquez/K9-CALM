@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="512" height="115" preserveAspectRatio="xMinYMin meet" viewBox="0 0 512 115" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="512" height="115"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-115)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="12" y="101" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,202) scale(1,-1)">500 ms ENTRE CAMBIOS / un ciclo completo dura 1000 ms</text>
+			<path d="M 80,81 L 80,31 Z" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="77.776" y="12" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,24) scale(1,-1)">0</text>
+			<path d="M 182.5,81 L 182.5,31 Z" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="175.828" y="12" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,24) scale(1,-1)">500</text>
+			<path d="M 285,81 L 285,31 Z" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="276.104" y="12" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,24) scale(1,-1)">1000</text>
+			<path d="M 387.5,81 L 387.5,31 Z" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="378.604" y="12" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,24) scale(1,-1)">1500</text>
+			<path d="M 490,81 L 490,31 Z" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.6;"/>
+			<text x="481.104" y="12" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,24) scale(1,-1)">2000</text>
+			<text x="12" y="64" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,128) scale(1,-1)">Encendido</text>
+			<text x="12" y="35" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,70) scale(1,-1)">Apagado</text>
+			<polyline points="80 38, 182.5 38, 182.5 67, 285 67, 285 38, 387.5 38, 387.5 67, 490 67, 490 38" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.6; fill: None; fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

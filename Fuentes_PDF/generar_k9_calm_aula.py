@@ -23,8 +23,8 @@ if (ROOT/'projects/K9_Calm').exists():
  from k9_identidad import REPO_URL
  (PUBLIC/'identidad.json').write_text(json.dumps({'repositorio':REPO_URL,'autor':'Hecho por el profesor Francisco López Velázquez.','sitio':'https://zolvek.com.mx','colores':{'marino':'#12334d','teal':'#087f99','blanco':'#ffffff'}},ensure_ascii=False,indent=2))
  # Leer desde copia publica permite regenerar la guia sin dependencias del repositorio principal.
- for name in ['generar_k9_calm_aula.py','k9_guia_facil.py','k9_aula_fuentes.py','k9_identidad.py']:
+ for name in ['generar_k9_calm_aula.py','k9_guia_facil.py','k9_aula_fuentes.py','k9_identidad.py','k9_guia_editorial.py','k9_laminas.py']:
   shutil.copyfile(HERE.parent/name,PUBLIC/'Fuentes_PDF'/name)
- for name in ['generar_k9_calm.py','k9_editorial.py','k9_detalles.py','k9_texto.py']:
+ for name in ['generar_k9_calm.py','k9_editorial.py','k9_texto.py']:
   shutil.copyfile(HERE.parent/name,PUBLIC/'Fuentes_PDF'/name)
 build(ROOT,PUBLIC)

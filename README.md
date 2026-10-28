@@ -18,6 +18,12 @@
 
 [**Descargar paquete completo de la entrega**](https://github.com/f-lopez-velazquez/K9-CALM/releases/latest) · [**Manual completo de consulta**](output/pdf/K9_Calm/Manual_K9_Calm.pdf)
 
+## Edición de taller: qué cambió
+
+La guía ahora dedica tres momentos a cada práctica: **A · conectar y comprobar**, **B · copiar y entender**, **C · observar, predecir y cambiar**. Incluye ejemplos numéricos y una hoja de resultados; el código permanece igual que en la versión compilada.
+
+Los circuitos se reconstruyeron con símbolos eléctricos, valores y referencias consistentes: R1/R2 para el divisor, R3 para el LED, R4 para SD, D2 para el LED y S2 para el botón. Los PDF contienen dibujos vectoriales, no capturas reducidas de los esquemas. Cada SVG editable tiene su PNG de revisión. Los símbolos de módulos no representan una huella física; sigue las etiquetas de la placa comprada.
+
 ## Cinco prácticas: conecta, pega, prueba y cambia
 
 | Práctica | Qué construyes | Instrucciones paso a paso | Código completo |

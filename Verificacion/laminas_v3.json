@@ -1,0 +1,26 @@
+{
+  "edicion": 3,
+  "laminas_revisadas": 25,
+  "texto_superpuesto": [],
+  "codigo_igual_al_compilado": true,
+  "referencias": {
+    "R1": "150 kohm: divisor arriba",
+    "R2": "100 kohm: divisor abajo",
+    "R3": "330 ohm: LED",
+    "R4": "100 kohm: SD",
+    "D2": "LED",
+    "S2": "boton de modo"
+  },
+  "pines": {
+    "LED": 10,
+    "boton": 3,
+    "SDA": 4,
+    "SCL": 5,
+    "BCLK": 6,
+    "WS": 7,
+    "SD": 1,
+    "ADC": 0
+  },
+  "hardware": "Sin pruebas fisicas",
+  "circuito_completo_LED_correcto": true
+}

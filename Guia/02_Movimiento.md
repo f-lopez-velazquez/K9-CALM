@@ -1,19 +1,31 @@
 # 02 · Medir movimiento
 
-Encender el LED cuando el objeto se mueve lo suficiente.
+Primero observa un número; después úsalo para decidir si prende el LED.
 
-[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo para abrir](../Codigo/02_Movimiento/02_Movimiento.ino)
+[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo](../Codigo/02_Movimiento/02_Movimiento.ino)
 
-## 1. Conecta sin USB
+## A · Conecta y comprueba
 
-| Terminal | Conexión |
+Con USB retirado: Módulo GY-521 / MPU6050. Conserva LED y botón.
+
+![Circuito](../Diagramas/H2_conexiones.png)
+
+| Desde | Conecta hasta |
 | --- | --- |
-| Conserva P1 | LED y botón quedan en sus pines. |
-| GY-521 / MPU6050 | VCC -> 3V3; GND y AD0 -> GND; SDA -> 4; SCL -> 5 |
+| VCC / GND del GY-521 | 3V3 / GND del ESP32 |
+| SDA / SCL del GY-521 | GPIO4 / GPIO5 |
+| AD0 | GND: dirección 0x68 |
+| XDA, XCL e INT | Dejar sin conectar |
 
-## 2. Copia todo o abre el archivo
+El acelerómetro mide en tres ejes. La biblioteca resume el cambio en act. Una act pequeña indica poca variación; un umbral decide cuándo avisar. No mide miedo.
 
-Borra el programa anterior del editor. Usa un solo sketch.
+SDA lleva datos y SCL sincroniza la conversación. Ambos necesitan pull-ups a 3V3; muchos módulos ya los traen. Alimenta el módulo con 3V3 y comprueba que sea compatible.
+
+**Comprobación:** Con USB, mide VCC-GND en el sensor. SDA y SCL en reposo deben estar cerca de 3.3 V, nunca 5 V. Después, el programa debe encontrar 0x68.
+
+## B · Copia el programa completo
+
+Abre el archivo o borra el editor y pega todo. No lo agregues debajo del código anterior.
 
 ```cpp
 // Hecho por el profesor Francisco López Velázquez.
@@ -35,31 +47,43 @@ void loop() {
 }
 ```
 
-## 3. Qué hace cada cosa
-
-| Código | Qué hace |
+| Línea o función | Qué hace |
 | --- | --- |
-| iniciar(2) | Agrega el sensor de movimiento. |
-| actividad() | Devuelve cuánto cambia la aceleración; unidad: m/s². |
-| > UMBRAL_MOV | Pregunta si la actividad supera el número elegido. |
-| encender(seMueve) | En AUTO, prende el LED cuando la respuesta es sí. |
+| const float UMBRAL_MOV = 0.70; | float guarda decimales. 0.70 es el umbral en m/s². |
+| aula.actividad() | Obtiene la última actividad calculada. |
+| actividad() > UMBRAL_MOV | Pregunta: ¿el número es mayor que 0.70? |
+| bool seMueve / encender(seMueve) | bool guarda sí/no. En AUTO, ese resultado controla la luz. |
 
-## 4. Haz la prueba
+### Ejemplo antes de probar
 
-1. Sube P2 y espera 5 s sobre la mesa. Busca I2C 0x68 y a cerca de 9.81.
-2. Sujeta el sensor al objeto o peluche; muévelo suave, sin golpear.
-3. Observa act: aumenta. El LED enciende si supera 0.70.
-4. Prueba el botón: MANUAL y la letra l siguen funcionando.
+| Caso | Cómo se interpreta |
+| --- | --- |
+| Ejemplo quieto | act = 0.12; 0.12 > 0.70 es NO -> LED apagado |
+| Ejemplo en movimiento | act = 1.10; 1.10 > 0.70 es SÍ -> LED encendido |
 
-## 5. Cambia un valor y vuelve a subir
+## C · Observa, predice y cambia
 
-| Valor | Cambio | Qué observar |
-| --- | --- | --- |
-| UMBRAL_MOV | 0.70 -> 0.30 | Puede encender con movimientos menores. |
-| UMBRAL_MOV | 0.70 -> 1.20 | Requiere una actividad mayor. |
+1. **Espera en la mesa.** Sube P2 y espera 5 s sin tocarlo. Busca I2C 0x68 e IMU:1. La magnitud a debe aproximarse a 9.81.
+2. **Mueve el objeto.** Fija el sensor a un objeto o peluche. Muévelo suave, sin golpear: act aumenta. El LED avisa si supera el umbral.
+3. **Déjalo quieto otra vez.** act debe disminuir. Prueba también el botón: MANUAL sigue disponible.
 
-**Si falla:** ¿No aparece 0x68? Revisa SDA=4, SCL=5 y AD0=GND. IMU:0 indica que no hay lecturas recientes; no significa reposo.
+Fragmentos ilustrativos de salida; tus números pueden variar:
 
-![Diagrama de la práctica](../Diagramas/H2_conexiones.png)
+```text
+I2C 0x68
+modo:1 a:9.81 giro:0.02 act:0.12 IMU:1
+```
 
-Se agregan solo las conexiones del MPU6050. El micrófono todavía no se monta.
+### Cambia UMBRAL_MOV
+
+| Prueba | Qué comparar |
+| --- | --- |
+| 0.30 | Más sensible a pequeños cambios |
+| 0.70 | Valor de partida |
+| 1.20 | Exige mayor actividad |
+
+La lectura act no cambia porque cambies el umbral; cambia la decisión. La misma act=0.50 prende con 0.30 y no prende con 0.70.
+
+**Si falla:** Sin 0x68 o con IMU:0, revisa 4/SDA, 5/SCL, AD0 y GND. No interpretes act=0 como reposo si no hay datos recientes.
+
+**Registra:** cambié ___; predije ___; observé ___. Avanza cuando puedas repetirlo y explicar por qué cambió la salida.

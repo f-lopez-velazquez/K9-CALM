@@ -1,19 +1,31 @@
 # 04 · Ver datos en el teléfono
 
-Consultar el modo y las alertas por Bluetooth Low Energy (BLE).
+Lleva el mismo estado del monitor serie al teléfono.
 
-[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo para abrir](../Codigo/04_Bluetooth/04_Bluetooth.ino)
+[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo](../Codigo/04_Bluetooth/04_Bluetooth.ino)
 
-## 1. Conecta sin USB
+## A · Conecta y comprueba
 
-| Terminal | Conexión |
+Con USB retirado: No agregues cables. El C3 ya tiene Bluetooth Low Energy.
+
+![Circuito](../Diagramas/07_sistema.png)
+
+| Desde | Conecta hasta |
 | --- | --- |
-| Conserva P3 | Todo sigue por USB. No conectes el portapilas. |
-| GPIO0 / divisor | Déjalo sin conectar en esta primera prueba; MEDIR_DIVISOR=false. |
+| Sensores, LED y botón | Exactamente como en P3 |
+| Alimentación | USB como única fuente |
+| GPIO0 | Libre; MEDIR_DIVISOR=false |
+| Portapilas y motor | No se conectan en esta guía |
 
-## 2. Copia todo o abre el archivo
+BLE publica un servicio y dos características: un dato de estado y otro de voltaje. La app consulta o se suscribe. No necesita internet para ese enlace.
 
-Borra el programa anterior del editor. Usa un solo sketch.
+No añadas una tarjeta Bluetooth: ya está integrada. Usa nRF Connect for Mobile de Nordic Semiconductor. La cuenta o la nube no forman parte de la práctica.
+
+**Comprobación:** Primero comprueba que P3 funciona. Si cambiaste valores, anótalos. Para empezar P4 usa los valores que aparecen en el archivo entregado.
+
+## B · Copia el programa completo
+
+Abre el archivo o borra el editor y pega todo. No lo agregues debajo del código anterior.
 
 ```cpp
 // Hecho por el profesor Francisco López Velázquez.
@@ -42,31 +54,44 @@ void loop() {
 }
 ```
 
-## 3. Qué hace cada cosa
-
-| Código | Qué hace |
+| Línea o función | Qué hace |
 | --- | --- |
-| iniciar(4) | Agrega BLE a las funciones anteriores. |
-| prepararMedicion(false,...) | Deja apagada la medición de voltaje mientras usas USB normal. |
-| enviar() | Publica estado y permite consultarlo desde nRF Connect. |
-| mostrar() | También mantiene los datos en el monitor de la computadora. |
+| prepararMedicion(false,...) | Deja el ADC opcional apagado durante USB normal. |
+| iniciar(4) | Conserva P3 y agrega el servicio BLE. |
+| aula.enviar() | Actualiza estado cada 500 ms cuando corresponde. |
+| aula.mostrar() | Mantiene el monitor serie para comparar con el teléfono. |
 
-## 4. Haz la prueba
+### Ejemplo antes de probar
 
-1. Sube P4. Instala y abre nRF Connect for Mobile de Nordic.
-2. Scan -> K9-CALM -> Connect. Expande el servicio 0001.
-3. Lee 0002 como texto; activa su suscripción a notificaciones.
-4. Pulsa el botón: cambia A/M. Lee 0003: debe decir USB; NA.
+| Caso | Cómo se interpreta |
+| --- | --- |
+| A E1 B0 Q0 | Automático / último impulso / USB o normal / puntuación 0 |
+| M E1 B0 Q0 | El botón cambia A a M; en P4 E1 queda hasta reiniciar |
 
-## 5. Cambia un valor y vuelve a subir
+## C · Observa, predice y cambia
 
-| Valor | Cambio | Qué observar |
-| --- | --- | --- |
-| UMBRAL_SONIDO | 0.004 -> 0.008 | Compara cuántos eventos E1 llegan al teléfono. |
-| ALERTA_MS | 1000 -> 500 | La luz dura medio segundo; BLE sigue actualizando. |
+1. **Escanea y conecta.** Abre nRF Connect: Scanner > Scan > K9-CALM > Connect. Concede permisos de dispositivos cercanos si Android los pide.
+2. **Lee una característica.** Expande el servicio 8d6c0001. En 0002 pulsa Read y elige texto UTF-8. Activa su suscripción para recibir cambios.
+3. **Compara dos pantallas.** Pulsa el botón: A cambia a M. Lee 0003: USB; NA. En la computadora, modo también cambia.
 
-**Si falla:** ¿No aparece? Revisa permisos Bluetooth/dispositivos cercanos y que otro teléfono no esté conectado. ¿No llegan cambios? Activa la suscripción en 0002.
+Fragmentos ilustrativos de salida; tus números pueden variar:
 
-![Diagrama de la práctica](../Diagramas/14_laboratorio.png)
+```text
+A E1 B0 Q0
+M E1 B0 Q0
+USB; NA
+```
 
-Montaje completo por USB. El divisor de GPIO0 se prueba después, con la guía de medición.
+### Cambia Un valor por vez
+
+| Prueba | Qué comparar |
+| --- | --- |
+| 1000 -> 500 | ALERTA_MS: la luz dura menos |
+| 0.004 -> 0.008 | UMBRAL_SONIDO: cambia la detección |
+| false | MEDIR_DIVISOR: mantener así en USB normal |
+
+La transmisión BLE no enciende por sí sola una notificación del sistema operativo. Debes permanecer conectado y suscrito dentro de la app.
+
+**Si falla:** Si no aparece, revisa permisos y desconecta otros teléfonos. Si puedes leer pero no llegan cambios, activa la suscripción de 0002.
+
+**Registra:** cambié ___; predije ___; observé ___. Avanza cuando puedas repetirlo y explicar por qué cambió la salida.

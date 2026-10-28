@@ -1,1 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="250" viewBox="0 0 1000 250"><rect width="100%" height="100%" fill="white"/><text x="25" y="35" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#12334d" text-anchor="start">De una senal física a un registro comprensible</text><rect x="20" y="90" width="210" height="90" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="125" y="123" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#12334d" text-anchor="middle">Sonido</text><text x="125" y="155" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="middle">INMP441 / I2S</text><line x1="230" y1="135" x2="265" y2="135" stroke="#18a0b5" stroke-width="3"/><text x="247" y="127" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#12334d" text-anchor="start">&gt;</text><rect x="270" y="90" width="210" height="90" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="375" y="123" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#12334d" text-anchor="middle">Movimiento</text><text x="375" y="155" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="middle">MPU6050 / I2C</text><line x1="480" y1="135" x2="515" y2="135" stroke="#18a0b5" stroke-width="3"/><text x="497" y="127" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#12334d" text-anchor="start">&gt;</text><rect x="520" y="90" width="210" height="90" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="625" y="123" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#12334d" text-anchor="middle">ESP32-C3</text><text x="625" y="155" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="middle">Análisis temporal</text><line x1="730" y1="135" x2="765" y2="135" stroke="#18a0b5" stroke-width="3"/><text x="747" y="127" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#12334d" text-anchor="start">&gt;</text><rect x="770" y="90" width="210" height="90" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="875" y="123" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#12334d" text-anchor="middle">Resultado</text><text x="875" y="155" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="middle">LED + BLE</text><text x="25" y="224" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="start">Sonido y movimiento se combinan en el ESP32-C3; no diagnostican miedo.</text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="512" height="145" preserveAspectRatio="xMinYMin meet" viewBox="0 0 512 145" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="512" height="145"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-145)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="12" y="86" width="142" height="42" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<text x="24" y="112" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,224) scale(1,-1)">SONIDO</text>
+			<text x="24" y="97" style="font-family: Helvetica; font-size: 8px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,194) scale(1,-1)">INMP441 / I2S</text>
+			<rect x="12" y="21" width="142" height="42" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<text x="24" y="47" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,94) scale(1,-1)">MOVIMIENTO</text>
+			<text x="24" y="32" style="font-family: Helvetica; font-size: 8px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,64) scale(1,-1)">MPU6050 / I2C</text>
+			<polyline points="154 106, 185 106, 185 72, 218 72" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<polyline points="154 41, 185 41, 185 72" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<circle cx="185" cy="72" r="2" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<rect x="218" y="47" width="132" height="49" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<text x="260.38" y="77" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,154) scale(1,-1)">ESP32-C3</text>
+			<text x="250.43200000000002" y="62" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,124) scale(1,-1)">Compara los datos</text>
+			<path d="M 350,72 L 381,72 Z" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="381 72, 376.6121 69.60287, 376.6121 74.39713" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 0.3; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<rect x="381" y="47" width="119" height="49" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<text x="414.3" y="77" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,154) scale(1,-1)">LED + BLE</text>
+			<text x="406.872" y="62" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,124) scale(1,-1)">Muestra un evento</text>
+			<text x="12" y="5" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,10) scale(1,-1)">Un evento acústico y un cambio de actividad no equivalen a un diagnóstico de miedo.</text>
+		</g>
+	</g>
+</svg>

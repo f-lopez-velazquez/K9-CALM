@@ -1,1 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330"><rect width="100%" height="100%" fill="white"/><text x="25" y="35" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#12334d" text-anchor="start">Prueba ADC por USB | sin pilas ni otra fuente</text><text x="45" y="130" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#12334d" text-anchor="start">3V3</text><line x1="120" y1="124" x2="200" y2="124" stroke="#087f99" stroke-width="3"/><rect x="200" y="95" width="160" height="55" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="280" y="129" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#12334d" text-anchor="middle">R1 150k</text><line x1="360" y1="124" x2="470" y2="124" stroke="#087f99" stroke-width="3"/><circle cx="470" cy="124" r="6" fill="#087f99"/><line x1="470" y1="124" x2="600" y2="124" stroke="#087f99" stroke-width="3"/><text x="470" y="87" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#12334d" text-anchor="middle">Nodo: ~1.32 V</text><text x="615" y="131" font-family="DejaVu Sans,sans-serif" font-size="22" fill="#12334d" text-anchor="start">GPIO0</text><line x1="470" y1="124" x2="470" y2="180" stroke="#15334c" stroke-width="3"/><rect x="390" y="180" width="160" height="50" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="470" y="212" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#12334d" text-anchor="middle">R2 100k</text><line x1="470" y1="230" x2="470" y2="270" stroke="#15334c" stroke-width="3"/><line x1="470" y1="270" x2="800" y2="270" stroke="#15334c" stroke-width="3"/><text x="815" y="276" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#12334d" text-anchor="start">GND</text><line x1="750" y1="124" x2="750" y2="185" stroke="#15334c" stroke-width="3"/><line x1="470" y1="124" x2="750" y2="124" stroke="#087f99" stroke-width="3"/><line x1="730" y1="185" x2="770" y2="185" stroke="#15334c" stroke-width="3"/><line x1="730" y1="199" x2="770" y2="199" stroke="#15334c" stroke-width="3"/><line x1="750" y1="199" x2="750" y2="270" stroke="#15334c" stroke-width="3"/><text x="790" y="198" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="start">100nF</text><text x="30" y="309" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#12334d" text-anchor="start">150k arriba, 100k abajo. Ventrada = Vnodo x 2.5. Placa alimentada solo por USB.</text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="512" height="204" preserveAspectRatio="xMinYMin meet" viewBox="0 0 512 204" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="512" height="204"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-204)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="20" y="181" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,362) scale(1,-1)">MEDIR VOLTAJE / prueba por USB</text>
+			<text x="20" y="159" style="font-family: Helvetica; font-size: 9px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,318) scale(1,-1)">R1 arriba · R2 abajo · el ADC mide el punto entre ambas.</text>
+			<path d="M 108,112 L 108,122 Z" style="stroke: rgb(65%,32%,15%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="104 122, 108 128, 112 122" style="stroke: rgb(65%,32%,15%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<text x="99.9945" y="133" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(65%,32%,15%); stroke:none;" transform="translate(0,266) scale(1,-1)">3V3</text>
+			<path d="M 108,112 L 108,100 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="103" y="76" width="10" height="24" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 108,76 L 108,64 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="120" y="91.0" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,182) scale(1,-1)">R1</text>
+			<text x="120" y="78.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,156) scale(1,-1)">150 kohm</text>
+			<circle cx="108" cy="64" r="2.3" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<path d="M 108,64 L 108,52 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="103" y="34" width="10" height="18" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 108,34 L 108,22 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="120" y="46.0" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,92) scale(1,-1)">R2</text>
+			<text x="120" y="33.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,66) scale(1,-1)">100 kohm</text>
+			<path d="M 108,22 L 108,16 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 100,16 L 116,16 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 103,13 L 113,13 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 106,10 L 110,10 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polyline points="108 64, 232 64" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<circle cx="232" cy="64" r="2.3" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<path d="M 232,64 L 232,46 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 223,46 L 241,46 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 223,40 L 241,40 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 232,40 L 232,22 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="246" y="48.0" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,96) scale(1,-1)">C2</text>
+			<text x="246" y="30.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,60) scale(1,-1)">100 nF</text>
+			<path d="M 232,22 L 232,16 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 224,16 L 240,16 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 227,13 L 237,13 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 230,10 L 234,10 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polyline points="232 64, 352 64" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<rect x="352" y="37" width="144" height="62" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="352" y="69" width="144" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<path d="M 352,69 L 496,69 Z" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="362" y="80" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,160) scale(1,-1)">U1 / ESP32-C3</text>
+			<path d="M 330,64 L 352,64 Z" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<text x="359" y="61" style="font-family: Helvetica; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,122) scale(1,-1)">GPIO0</text>
+			<text x="283.461" y="125" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,250) scale(1,-1)">Vnodo = 1.32 V si 3V3 = 3.30 V</text>
+			<text x="20" y="3" style="font-family: Helvetica; font-size: 8.3px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,6) scale(1,-1)">La tensión reconstruida es Vnodo x 2.50. No confundirla con un porcentaje de carga.</text>
+		</g>
+	</g>
+</svg>

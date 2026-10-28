@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="512" height="148" preserveAspectRatio="xMinYMin meet" viewBox="0 0 512 148" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="512" height="148"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-148)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="12" y="131" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,262) scale(1,-1)">CÓMO LEER EL PLANO / símbolos que usarás en las prácticas</text>
+			<path d="M 20,90 L 70,90 Z" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="85" y="91" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,182) scale(1,-1)">Cable</text>
+			<text x="85" y="78" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,156) scale(1,-1)">Une dos terminales.</text>
+			<polyline points="220 90, 266 90" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<polyline points="243 104, 243 73" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<circle cx="243" cy="90" r="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<text x="282" y="91" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,182) scale(1,-1)">Punto</text>
+			<text x="282" y="78" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,156) scale(1,-1)">Aquí sí hay unión.</text>
+			<path d="M 435,100 L 435,94 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 427,94 L 443,94 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 430,91 L 440,91 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 433,88 L 437,88 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="457" y="91" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,182) scale(1,-1)">GND</text>
+			<text x="405" y="63" style="font-family: Helvetica; font-size: 8.3px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,126) scale(1,-1)">Todos los GND se unen.</text>
+			<path d="M 20,32 L 32,32 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="32" y="27" width="26" height="10" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 58,32 L 70,32 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="45.0" y="52" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,104) scale(1,-1)"></text>
+			<text x="45.0" y="41" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,82) scale(1,-1)"></text>
+			<text x="85" y="36" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,72) scale(1,-1)">Resistencia</text>
+			<text x="85" y="23" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,46) scale(1,-1)">Su valor se indica al lado.</text>
+			<circle cx="221" cy="32" r="2" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="244" cy="32" r="2" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 223,34 L 242,45 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="260" y="36" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,72) scale(1,-1)">Botón abierto</text>
+			<text x="260" y="23" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,46) scale(1,-1)">Al pulsarlo, une ambos lados.</text>
+		</g>
+	</g>
+</svg>

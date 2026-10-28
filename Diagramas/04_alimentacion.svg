@@ -1,1 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="460" viewBox="0 0 1000 460"><rect width="100%" height="100%" fill="white"/><text x="25" y="35" font-family="DejaVu Sans,sans-serif" font-size="24" fill="#12334d" text-anchor="start">H4 | Alimentación portátil, habilitacion condicionada</text><rect x="20" y="90" width="190" height="75" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="115" y="120" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="middle">3 AAA</text><text x="115" y="145" font-family="DejaVu Sans,sans-serif" font-size="14" fill="#12334d" text-anchor="middle">max. medido</text><rect x="230" y="90" width="190" height="75" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="325" y="120" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="middle">F1 + D1</text><text x="325" y="145" font-family="DejaVu Sans,sans-serif" font-size="14" fill="#12334d" text-anchor="middle">PTC + Schottky</text><rect x="460" y="90" width="190" height="75" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="555" y="120" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="middle">S1</text><text x="555" y="145" font-family="DejaVu Sans,sans-serif" font-size="14" fill="#12334d" text-anchor="middle">interruptor</text><rect x="690" y="90" width="190" height="75" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="785" y="120" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="middle">5V / VBUS</text><text x="785" y="145" font-family="DejaVu Sans,sans-serif" font-size="14" fill="#12334d" text-anchor="middle">LDO -&gt; 3V3</text><line x1="210" y1="127" x2="230" y2="127" stroke="#d75555" stroke-width="4"/><line x1="440" y1="127" x2="460" y2="127" stroke="#d75555" stroke-width="4"/><line x1="670" y1="127" x2="690" y2="127" stroke="#d75555" stroke-width="4"/><line x1="680" y1="127" x2="680" y2="215" stroke="#d75555" stroke-width="3"/><circle cx="680" cy="127" r="5" fill="#cda552"/><rect x="610" y="215" width="140" height="50" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="680" y="246" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#12334d" text-anchor="middle">R1 150k</text><line x1="680" y1="265" x2="680" y2="300" stroke="#15334c" stroke-width="3"/><line x1="680" y1="300" x2="880" y2="300" stroke="#218ba7" stroke-width="3"/><text x="885" y="306" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#12334d" text-anchor="start">GPIO0</text><rect x="610" y="320" width="140" height="50" rx="8" fill="#edf6fa" stroke="#12334d" stroke-width="2"/><text x="680" y="351" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#12334d" text-anchor="middle">R2 100k</text><line x1="680" y1="300" x2="680" y2="320" stroke="#15334c" stroke-width="3"/><line x1="680" y1="370" x2="680" y2="400" stroke="#15334c" stroke-width="3"/><line x1="680" y1="400" x2="900" y2="400" stroke="#15334c" stroke-width="3"/><text x="905" y="406" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#12334d" text-anchor="start">GND</text><line x1="830" y1="300" x2="830" y2="335" stroke="#15334c" stroke-width="3"/><line x1="810" y1="335" x2="850" y2="335" stroke="#15334c" stroke-width="3"/><line x1="810" y1="347" x2="850" y2="347" stroke="#15334c" stroke-width="3"/><line x1="830" y1="347" x2="830" y2="400" stroke="#15334c" stroke-width="3"/><text x="852" y="350" font-family="DejaVu Sans,sans-serif" font-size="14" fill="#12334d" text-anchor="start">100nF</text><text x="25" y="220" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="start">D1: ánodo hacia + pilas; banda/cátodo hacia S1.</text><text x="25" y="250" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="start">F1: PTC 0.5 A nominal, validar curva y caída.</text><text x="25" y="280" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="start">C1: 100 uF / 10 V entre nodo S1 y GND.</text><text x="25" y="310" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="start">Todos los negativos a GND. USB desconectado.</text><text x="25" y="340" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="start">El divisor mide DESPUÉS de F1, D1 y S1.</text><text x="25" y="370" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#12334d" text-anchor="start">No detecta inversion, temperatura ni corta la energía.</text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="512" height="250" preserveAspectRatio="xMinYMin meet" viewBox="0 0 512 250" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="512" height="250"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-250)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="12" y="232" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,464) scale(1,-1)">ALIMENTACIÓN PORTÁTIL / validar el LDO de la placa antes de conectar pilas</text>
+			<rect x="12" y="123" width="70" height="78" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: none; fill-rule: evenodd;"/>
+			<text x="41.249" y="179" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,358) scale(1,-1)">B1</text>
+			<text x="30.7415" y="163" style="font-family: Helvetica; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,326) scale(1,-1)">3 x AAA</text>
+			<text x="31.439999999999998" y="146" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,292) scale(1,-1)">alcalinas</text>
+			<polyline points="82 181, 104 181" style="stroke: rgb(65%,32%,15%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<path d="M 104,181 L 116,181 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="116" y="176" width="26" height="10" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 142,181 L 154,181 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="124.332" y="201" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,402) scale(1,-1)">F1</text>
+			<text x="110.548" y="190" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,380) scale(1,-1)">PTC 0.5 A</text>
+			<path d="M 154,181 L 178,181 Z" style="stroke: rgb(65%,32%,15%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 178,181 L 191,181 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="191 189, 191 173, 207 181" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 208,190 L 208,172 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 208,181 L 222,181 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="194.888" y="205" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,410) scale(1,-1)">D1</text>
+			<text x="184.66" y="194" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,388) scale(1,-1)">Schottky</text>
+			<path d="M 222,181 L 250,181 Z" style="stroke: rgb(65%,32%,15%); stroke-linecap: butt; stroke-width: 1;"/>
+			<circle cx="250" cy="181" r="2" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="274" cy="181" r="2" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 252,183 L 270,192 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="262" y="205" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,410) scale(1,-1)">S1</text>
+			<polyline points="276 181, 346 181, 346 122" style="stroke: rgb(65%,32%,15%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<rect x="368" y="82" width="132" height="79" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="368" y="131" width="132" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<path d="M 368,131 L 500,131 Z" style="stroke: rgb(85%,89%,91%); stroke-linecap: butt; stroke-width: 0.7;"/>
+			<text x="378" y="142" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,284) scale(1,-1)">U1 / SuperMini</text>
+			<path d="M 346,122 L 368,122 Z" style="stroke: rgb(65%,32%,15%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<text x="375" y="119" style="font-family: Helvetica; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,238) scale(1,-1)">5V / entrada</text>
+			<text x="380" y="99" style="font-family: Helvetica; font-size: 8px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,198) scale(1,-1)">LDO -&gt; 3V3</text>
+			<circle cx="304" cy="181" r="2" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(65%,32%,15%); fill-rule: evenodd;"/>
+			<polyline points="304 181, 304 153, 196 153, 196 138" style="stroke: rgb(65%,32%,15%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<path d="M 196,138 L 196,126 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="191" y="107" width="10" height="19" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 196,107 L 196,95 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="173.776" y="119.5" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,239) scale(1,-1)">R1</text>
+			<text x="148.872" y="106.5" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,213) scale(1,-1)">150 kohm</text>
+			<circle cx="196" cy="95" r="2" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<path d="M 196,95 L 196,83 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="191" y="64" width="10" height="19" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1; fill: none; fill-rule: evenodd;"/>
+			<path d="M 196,64 L 196,52 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="173.776" y="76.5" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,153) scale(1,-1)">R2</text>
+			<text x="148.872" y="63.5" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,127) scale(1,-1)">100 kohm</text>
+			<polyline points="196 95, 246 95" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<circle cx="246" cy="95" r="2" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(3%,49%,60%); fill-rule: evenodd;"/>
+			<path d="M 246,95 L 246,76.5 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 237,76.5 L 255,76.5 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 237,70.5 L 255,70.5 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 246,70.5 L 246,52 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="260" y="78.5" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,157) scale(1,-1)">C2</text>
+			<text x="260" y="60.5" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,121) scale(1,-1)">100 nF</text>
+			<polyline points="246 95, 282 95" style="stroke: rgb(3%,49%,60%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<text x="249" y="106" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,212) scale(1,-1)">GPIO0</text>
+			<path d="M 304,153 L 304,131 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 304,131 L 304,94.5 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 295,94.5 L 313,94.5 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 295,88.5 L 313,88.5 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 304,88.5 L 304,52 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="318" y="96.5" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,193) scale(1,-1)">C1</text>
+			<text x="318" y="78.5" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,157) scale(1,-1)">100 uF</text>
+			<text x="289" y="101" style="font-family: Helvetica; font-size: 10px;fill: rgb(65%,32%,15%); stroke:none;" transform="translate(0,202) scale(1,-1)">+</text>
+			<polyline points="82 140, 100 140, 100 36, 434 36, 434 82" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 1.2; fill: None; fill-rule: evenodd;"/>
+			<path d="M 196,52 L 196,36 Z" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 1;"/>
+			<circle cx="196" cy="36" r="2" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(37%,46%,51%); fill-rule: evenodd;"/>
+			<path d="M 246,52 L 246,36 Z" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 1;"/>
+			<circle cx="246" cy="36" r="2" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(37%,46%,51%); fill-rule: evenodd;"/>
+			<path d="M 304,52 L 304,36 Z" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 1;"/>
+			<circle cx="304" cy="36" r="2" style="stroke: none; stroke-linecap: butt; stroke-width: 0.8; fill: rgb(37%,46%,51%); fill-rule: evenodd;"/>
+			<path d="M 100,36 L 100,30 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 92,30 L 108,30 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 95,27 L 105,27 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 98,24 L 102,24 Z" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="399" y="65" style="font-family: Helvetica; font-size: 8px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,130) scale(1,-1)">GND</text>
+			<text x="366" y="189" style="font-family: Helvetica; font-size: 8px;fill: rgb(65%,32%,15%); stroke:none;" transform="translate(0,378) scale(1,-1)">Ventrada</text>
+			<text x="12" y="3" style="font-family: Helvetica; font-size: 8.3px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,6) scale(1,-1)">Sin USB. El divisor toma Ventrada después de F1, D1 y S1; C1 lleva + hacia Ventrada.</text>
+		</g>
+	</g>
+</svg>

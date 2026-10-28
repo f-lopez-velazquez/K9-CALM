@@ -1,19 +1,31 @@
-# 05 · El detector completo
+# 05 · Relacionar sonido y movimiento
 
-Comparar sonido y movimiento antes y después; mostrar una categoría experimental.
+Un ruido no basta: observa qué pasó antes y después.
 
-[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo para abrir](../Codigo/05_Detector_completo/05_Detector_completo.ino)
+[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo](../Codigo/05_Detector_completo/05_Detector_completo.ino)
 
-## 1. Conecta sin USB
+## A · Conecta y comprueba
 
-| Terminal | Conexión |
+Con USB retirado: No agregues componentes. Ahora cambia la forma de decidir.
+
+![Circuito](../Diagramas/08_estados.png)
+
+| Desde | Conecta hasta |
 | --- | --- |
-| Conserva P4 | Mismo montaje, mismos pines y USB como única fuente. |
-| Sin motor | Esta guía no conecta motores ni coloca el prototipo en animales. |
+| Montaje | Conserva P4 y USB |
+| Objeto | Sensor sujeto: no debe quedar colgando |
+| Sonido | Grabación moderada, misma distancia |
+| Personas y animales | Pruebas en mesa o peluche; sin perros |
 
-## 2. Copia todo o abre el archivo
+El programa conserva 2 s de actividad previa. Si detecta un impulso, observa 1.5 s posteriores. Compara las medias (promedios de las lecturas) y comprueba que haya suficientes datos.
 
-Borra el programa anterior del editor. Usa un solo sketch.
+Las categorías describen ensayos: E0 sin evento pendiente, E1 sonido, E2 posible cambio posterior, E3 datos insuficientes. Ninguna mide miedo con certeza.
+
+**Comprobación:** Al iniciar, deja el objeto quieto 5 s. Revisa IMU:1, MIC:1 y que rms cambie con sonido. E0 por sí solo no demuestra que los sensores estén bien.
+
+## B · Copia el programa completo
+
+Abre el archivo o borra el editor y pega todo. No lo agregues debajo del código anterior.
 
 ```cpp
 // Hecho por el profesor Francisco López Velázquez.
@@ -42,33 +54,44 @@ void loop() {
 }
 ```
 
-## 3. Qué hace cada cosa
-
-| Código | Qué hace |
+| Línea o función | Qué hace |
 | --- | --- |
-| ajustarCambio(...) | Fija la diferencia mínima de actividad para comparar. |
-| iniciar(5) | Conserva sensores, botón, LED, BLE y ADC opcional. |
-| compararEvento() | Guarda 2 s previos y observa 1.5 s posteriores. |
-| evento() == 2 | Pregunta si hubo un posible cambio de reacción. |
-| enviar() / mostrar() | Presentan E0, E1, E2 o E3 y una puntuación de ensayo. |
+| ajustarCambio(CAMBIO_MOV) | Fija la diferencia mínima de actividad que compararás. |
+| compararEvento() | Gestiona historia previa, ventana posterior y espera. |
+| aula.evento() == 2 | Comprueba si la categoría actual es E2. |
+| encender(...) / enviar() | Muestra la decisión mediante LED y BLE. |
 
-## 4. Haz la prueba
+### Ejemplo antes de probar
 
-1. Sube P5 y espera 5 s sin mover el objeto.
-2. Sonido moderado sin mover: espera E1 si se detecta impulso.
-3. Repite y mueve el objeto después del sonido: puede aparecer E2.
-4. Pon MANUAL: sigue midiendo y enviando, pero deja de clasificar.
+| Caso | Cómo se interpreta |
+| --- | --- |
+| Antes: 0.10 / después: 0.20 | E1 si hubo impulso y datos válidos. |
+| Antes: 0.10 / después: 1.20 | Puede producir E2; requiere datos válidos y cambio suficiente. |
 
-## 5. Cambia un valor y vuelve a subir
+## C · Observa, predice y cambia
 
-| Valor | Cambio | Qué observar |
-| --- | --- | --- |
-| CAMBIO_MOV | 0.70 -> 0.30 | Reduce el mínimo de cambio; la variación previa también cuenta. |
-| CAMBIO_MOV | 0.70 -> 1.20 | Aumenta el mínimo: exige más cambio de actividad. |
-| UMBRAL_SONIDO | 0.004 -> 0.008 | Sube el mínimo acústico; compara sin cambiar volumen. |
+1. **Control: solo sonido.** Tras 5 s quieto, reproduce el sonido sin mover nada. Debe producir E1 si detecta un impulso.
+2. **Añade movimiento posterior.** Repite el mismo sonido y mueve el objeto durante el siguiente segundo y medio. Puede producir E2 si cambia suficiente.
+3. **Prueba MANUAL.** Pulsa el botón: sigue midiendo y transmitiendo, pero P5 muestra M y E0; desarma la comparación automática.
 
-**Si falla:** ¿Siempre E1? Observa act y mueve el objeto después del sonido. ¿E3? Espera 5 s y revisa IMU/MIC. No elimines los controles de calidad.
+Fragmentos ilustrativos de salida; tus números pueden variar:
 
-![Diagrama de la práctica](../Diagramas/08_estados.png)
+```text
+A E1 B0 Q20
+A E2 B0 Q80
+M E0 B0 Q0
+```
 
-Espera datos, observa después del sonido y deja 2 s de reposo para no contar varias veces el mismo evento.
+### Cambia CAMBIO_MOV
+
+| Prueba | Qué comparar |
+| --- | --- |
+| 0.30 | Reduce el mínimo; observa falsas alertas |
+| 0.70 | Valor de partida |
+| 1.20 | Aumenta el mínimo de cambio |
+
+También cuenta la variación previa: se usa el mayor entre CAMBIO_MOV y tres veces esa variación. Q es una puntuación experimental, no un porcentaje de miedo.
+
+**Si falla:** Siempre E1: revisa cuándo mueves el objeto y observa act. E3: espera 5 s y revisa lecturas recientes. No quites las condiciones de calidad para forzar E2.
+
+**Registra:** cambié ___; predije ___; observé ___. Avanza cuando puedas repetirlo y explicar por qué cambió la salida.

@@ -1,1 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440"><rect width="100%" height="100%" fill="white"/><text x="30" y="35" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#12334d" text-anchor="start">Propuesta de montaje | maqueta sobre peluche, sin uso animal</text><rect x="100" y="90" width="800" height="260" rx="8" fill="#e5edf2" stroke="#12334d" stroke-width="2"/><rect x="130" y="195" width="740" height="55" rx="8" fill="#b9cbd6" stroke="#12334d" stroke-width="2"/><rect x="155" y="120" width="180" height="150" rx="8" fill="#174965" stroke="#12334d" stroke-width="2"/><text x="245.0" y="195.0" font-family="DejaVu Sans,sans-serif" font-size="17" fill="white" text-anchor="middle">3 AAA en caja</text><rect x="400" y="125" width="180" height="140" rx="8" fill="#174965" stroke="#12334d" stroke-width="2"/><text x="490.0" y="195.0" font-family="DejaVu Sans,sans-serif" font-size="17" fill="white" text-anchor="middle">ESP32-C3</text><rect x="650" y="125" width="130" height="65" rx="8" fill="#174965" stroke="#12334d" stroke-width="2"/><text x="715.0" y="157.5" font-family="DejaVu Sans,sans-serif" font-size="17" fill="white" text-anchor="middle">GY-521</text><rect x="650" y="235" width="130" height="65" rx="8" fill="#174965" stroke="#12334d" stroke-width="2"/><text x="715.0" y="267.5" font-family="DejaVu Sans,sans-serif" font-size="17" fill="white" text-anchor="middle">INMP441</text><text x="120" y="385" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#12334d" text-anchor="start">Caja aislante + alivio de tensión + fijación del sensor. Antena y puerto acústico libres.</text><text x="120" y="414" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#12334d" text-anchor="start">Sin bordes, piezas sueltas ni conductores expuestos. Retirar para programar por USB.</text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="512" height="195" preserveAspectRatio="xMinYMin meet" viewBox="0 0 512 195" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="512" height="195"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-195)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="20" y="32" width="472" height="128" rx="5" ry="5" style="stroke: rgb(7%,20%,30%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(94%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="36" y="52" width="100" height="90" rx="2" ry="2" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="80.249" y="125" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,250) scale(1,-1)">B1</text>
+			<text x="59.32" y="111" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,222) scale(1,-1)">Pack separado</text>
+			<rect x="166" y="52" width="130" height="90" rx="2" ry="2" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="225.249" y="125" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,250) scale(1,-1)">U1</text>
+			<text x="212.10399999999998" y="111" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,222) scale(1,-1)">ESP32-C3</text>
+			<rect x="326" y="102" width="150" height="40" rx="2" ry="2" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="375.989" y="125" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,250) scale(1,-1)">U2 / GY-521</text>
+			<text x="376.104" y="111" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,222) scale(1,-1)">Fijación rígida</text>
+			<rect x="326" y="49" width="150" height="40" rx="2" ry="2" style="stroke: rgb(37%,46%,51%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="372.74" y="72" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,144) scale(1,-1)">U3 / INMP441</text>
+			<text x="380.548" y="58" style="font-family: Helvetica; font-size: 8px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,116) scale(1,-1)">Puerto libre</text>
+			<text x="129.9865" y="177" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,20%,30%); stroke:none;" transform="translate(0,354) scale(1,-1)">DISTRIBUCIÓN MECÁNICA / propuesta sobre una maqueta</text>
+			<text x="105.52450000000002" y="9" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(37%,46%,51%); stroke:none;" transform="translate(0,18) scale(1,-1)">Caja aislante, alivio de tensión y antena libre. No es una colocación terapéutica.</text>
+		</g>
+	</g>
+</svg>

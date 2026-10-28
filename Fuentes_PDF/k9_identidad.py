@@ -9,7 +9,7 @@ REPO_URL='https://github.com/f-lopez-velazquez/K9-CALM'
 def furniture(c,d,label='MANUAL COMPLETO'):
  c.saveState()
  # Marca de agua tenue detrás del contenido; texto real, seleccionable.
- c.setFillColor(colors.HexColor(NAVY));c.setFillAlpha(.045)
+ c.setFillColor(colors.HexColor(NAVY));c.setFillAlpha(.025)
  c.translate(306,396);c.rotate(36);c.setFont('Bold',20)
  c.drawCentredString(0,0,AUTHOR);c.setFont('Body',17);c.drawCentredString(0,-27,WEBSITE)
  c.restoreState();c.saveState()

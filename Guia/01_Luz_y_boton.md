@@ -1,19 +1,31 @@
 # 01 · Luz y botón
 
-Encender una luz, cambiar su velocidad y usar un botón.
+El ESP32 controla una luz. El botón cambia cómo la usamos.
 
-[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo para abrir](../Codigo/01_Luz_y_boton/01_Luz_y_boton.ino)
+[Inicio](../README.md) · [Configuración](00_Empezar.md) · [Archivo listo](../Codigo/01_Luz_y_boton/01_Luz_y_boton.ino)
 
-## 1. Conecta sin USB
+## A · Conecta y comprueba
 
-| Terminal | Conexión |
+Con USB retirado: LED, resistencia de 330 ohm y pulsador.
+
+![Circuito](../Diagramas/H1_conexiones.png)
+
+| Desde | Conecta hasta |
 | --- | --- |
-| GPIO10 | 330 ohm -> ánodo LED; cátodo -> GND |
-| GPIO3 | Botón normalmente abierto -> GND |
+| GPIO10 | 330 ohm -> ánodo del LED |
+| Cátodo del LED | GND |
+| GPIO3 | Un lado del pulsador |
+| Otro lado del pulsador | GND |
 
-## 2. Copia todo o abre el archivo
+El LED necesita una resistencia para limitar corriente. El botón conecta GPIO3 a GND al pulsarlo; la placa detecta ese cambio.
 
-Borra el programa anterior del editor. Usa un solo sketch.
+Revisa el LED: el cátodo suele ser la pata corta y el lado plano. Comprueba los pares del botón con continuidad, sin USB. Rint del plano ya está dentro del ESP32: no la compres.
+
+**Comprobación:** Conecta USB y mide entre 3V3 y GND: cerca de 3.3 V. No unas 3V3 con GND. Si hay calor o reinicios, retira USB y revisa.
+
+## B · Copia el programa completo
+
+Abre el archivo o borra el editor y pega todo. No lo agregues debajo del código anterior.
 
 ```cpp
 // Hecho por el profesor Francisco López Velázquez.
@@ -34,31 +46,44 @@ void loop() {                // Se repite continuamente.
 }
 ```
 
-## 3. Qué hace cada cosa
-
-| Código | Qué hace |
+| Línea o función | Qué hace |
 | --- | --- |
-| iniciar(1) | Prepara LED, botón y monitor serie. |
-| actualizar() | Atiende el botón; conserva el programa en marcha. |
-| parpadear(...) | En AUTO, cambia la luz cada cierto tiempo. |
-| mostrar() | Escribe modo:1 (AUTO) o modo:0 (MANUAL). |
+| const int PARPADEO_MS = 500; | Un número entero: fija 500 ms entre cambios de luz. |
+| setup() / iniciar(1) | Prepara el equipo una vez, al encender. |
+| loop() / actualizar() | Repite el trabajo y atiende el botón. |
+| parpadear() / mostrar() | Controla la luz y escribe el modo. |
 
-## 4. Haz la prueba
+### Ejemplo antes de probar
 
-1. Sube el programa. Abre Monitor serie a 115200. El LED parpadea.
-2. Pulsa y suelta el botón: aparece modo:0. Es MANUAL.
-3. Envía l (ele minúscula) desde el monitor: la luz cambia.
-4. Pulsa otra vez: regresa a AUTO y vuelve el parpadeo.
+| Caso | Cómo se interpreta |
+| --- | --- |
+| El tiempo del programa | 0 ms -> 500 ms -> 1000 ms |
+| El LED en AUTO | apagado -> encendido -> apagado |
 
-## 5. Cambia un valor y vuelve a subir
+## C · Observa, predice y cambia
 
-| Valor | Cambio | Qué observar |
-| --- | --- | --- |
-| PARPADEO_MS | 500 -> 250 | Cambia más rápido; ciclo completo de 0.5 s. |
-| PARPADEO_MS | 500 -> 1000 | Cambia más lento; ciclo completo de 2 s. |
+1. **Carga y mira.** Verificar > Subir. Abre Monitor serie a 115200. El LED cambia cada medio segundo.
+2. **Pulsa una vez.** Debe aparecer MANUAL y modo:0. Mantener pulsado no debe alternar continuamente.
+3. **Manda una orden.** En MANUAL, escribe l (ele minúscula) y envía. La luz cambia. Vuelve a pulsar: AUTO.
 
-**Si falla:** ¿No enciende? Revisa la polaridad del LED, la resistencia y GPIO10. ¿Siempre MANUAL? Revisa qué patas del botón están unidas.
+Fragmentos ilustrativos de salida; tus números pueden variar:
 
-![Diagrama de la práctica](../Diagramas/13_led_boton.png)
+```text
+modo:1
+MANUAL
+modo:0
+```
 
-LED con resistencia en serie y botón a tierra. El dibujo representa conexiones, no una fotografía.
+### Cambia PARPADEO_MS
+
+| Prueba | Qué comparar |
+| --- | --- |
+| 500 | 1.0 s por ciclo completo |
+| 250 | 0.5 s por ciclo completo |
+| 1000 | 2.0 s por ciclo completo |
+
+Un ciclo incluye encender y apagar. Por eso 500 ms entre cambios producen un ciclo de 1000 ms.
+
+**Si falla:** Si no prende, prueba MANUAL + l. Revisa LED al revés, resistencia y GPIO10. Si el botón nunca cambia, revisa sus pares de patas.
+
+**Registra:** cambié ___; predije ___; observé ___. Avanza cuando puedas repetirlo y explicar por qué cambió la salida.
