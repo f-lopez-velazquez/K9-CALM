@@ -1,0 +1,19 @@
+{
+  "Manual_K9_Calm.pdf": {
+    "paginas": 66,
+    "enlace_portada": true,
+    "marca_todas_paginas": true,
+    "codigo_copiable_sin_numeros": false
+  },
+  "Manual_K9_Calm_Guia_Facil.pdf": {
+    "paginas": 20,
+    "enlace_portada": true,
+    "marca_todas_paginas": true,
+    "codigo_copiable_sin_numeros": true
+  },
+  "paquete": {
+    "hashes": true,
+    "regeneracion_independiente": true
+  },
+  "pruebas_fisicas": "Pendientes; no se usaron animales ni hardware."
+}

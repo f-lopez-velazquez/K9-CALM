@@ -1,0 +1,32 @@
+[
+  {
+    "practica": "01_Luz_y_boton",
+    "resultado": "Compilada",
+    "exit_code": 0,
+    "segundos": 24.7
+  },
+  {
+    "practica": "02_Movimiento",
+    "resultado": "Compilada",
+    "exit_code": 0,
+    "segundos": 27.3
+  },
+  {
+    "practica": "03_Sonido",
+    "resultado": "Compilada",
+    "exit_code": 0,
+    "segundos": 29.7
+  },
+  {
+    "practica": "04_Bluetooth",
+    "resultado": "Compilada",
+    "exit_code": 0,
+    "segundos": 29.0
+  },
+  {
+    "practica": "05_Detector_completo",
+    "resultado": "Compilada",
+    "exit_code": 0,
+    "segundos": 29.3
+  }
+]

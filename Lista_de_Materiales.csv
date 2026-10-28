@@ -1,0 +1,36 @@
+﻿Grupo,Componente,Cantidad,Especificacion,Funcion,MXN_unitario_planeacion_no_cotizado,Busqueda_Mercado_Libre,Practica
+Obligatorio,ESP32-C3 SuperMini,1,USB-C; 16 terminales; ESP32-C3 con flash 4 MB,Control,100,ESP32 C3 SuperMini USB C 4MB,1
+Obligatorio,MPU6050 GY-521,1,Modulo con regulador y pull-ups a 3.3 V verificables,Movimiento,65,GY 521 MPU6050 acelerometro giroscopio,2
+Obligatorio,INMP441,1,Microfono I2S; VDD 3.3 V; L/R accesible,Sonido,100,INMP441 I2S microfono digital,3
+Obligatorio,LED rojo,1,3 mm; Vf aproximada 1.8-2.2 V,Alerta,3,LED rojo 3mm difuso,1
+Obligatorio,Resistencia LED,1,330 ohm; 1/4 W; 5%,Limitar corriente,1,resistencia 330 ohms cuarto watt,1
+Obligatorio,Pulsador,1,Normalmente abierto; 2 o 4 patas,Modo,5,pulsador tactil 6x6 normalmente abierto,1
+Obligatorio,Protoboard,1,400 o 830 puntos; revisar separacion de placa,Montaje,70,protoboard 830 puntos,1
+Obligatorio,Cables Dupont,1,Juego M-M y M-H; cortos para I2S,Conexiones,65,cables dupont macho hembra macho macho,1
+Obligatorio,Cable USB-C,1,"USB datos y alimentacion, no solo carga",Programacion,70,cable USB A USB C datos,1
+Obligatorio,Cabeceras,1,2 tiras 1x8 y tiras para sensores; paso 2.54 mm,Soldadura,12,pines header macho 2.54 mm,1
+Obligatorio,Pulldown SD,1,100 kohm; 1/4 W; 1%,Linea I2S definida,1,resistencia 100k 1 porciento,3
+Portatil,Pilas AAA,3,Alcalinas 1.5 V; mismo lote; no recargables en este diseno,Energia,18,pilas AAA alcalinas,4
+Portatil,Portapilas,1,3 AAA en serie; tapa y cables con polaridad,Proteccion mecanica,35,portapilas 3 AAA con tapa,4
+Portatil,Interruptor,1,SPST; >=0.5 A a 6 V CC; preferir desconexion fisica del pack,Encendido,10,interruptor mini SPST 6V,4
+Portatil,PTC F1,1,"Ihold 0.5 A orientativo; validar Itrip, temperatura y curva",Limitar fallas,8,fusible rearmable PTC 0.5A,4
+Portatil,Diodo D1,1,Schottky SS14 o 1N5819; 1 A; respetar banda,Polaridad inversa,4,diodo 1N5819 Schottky,4
+Portatil,Resistencia R1,1,150 kohm; 1%; arriba del divisor,Medir voltaje,1,resistencia 150k 1 porciento,4
+Portatil,Resistencia R2,1,100 kohm; 1%; abajo del divisor,Medir voltaje,1,resistencia 100k 1 porciento,4
+Portatil,Capacitor ADC,1,100 nF ceramico X7R; >=10 V,Estabilizar ADC,2,capacitor 100nf ceramico,4
+Portatil,Capacitor entrada,1,100 uF electrolitico; 10 V; observar polaridad,Reserva transitorios,5,capacitor 100uF 10V,4
+Obligatorio,Desacoplos sensores,2,100 nF X7R en VDD-GND si modulo no los incorpora,Filtrado local,2,capacitor 100nf X7R,3
+Portatil,Conector polarizado,1,"2 vias, desmontable; corriente >=0.5 A",Separar USB/pilas,12,conector polarizado 2 pines cable,4
+Portatil,Placa perforada,1,Fibra; pads aislados; tamano segun caja,Montaje final,30,placa perforada universal fibra,5
+Portatil,Caja y fijaciones,1,"Aislante; sin bordes; tornillos, separadores, velcro",Montaje sobre maqueta,80,caja plastica electronica pequena velcro,5
+Portatil,Consumibles,1,"Cable flexible, termocontractil, soldadura y flux",Aislar y fijar,50,kit termocontractil cable flexible soldadura,5
+Compartido,Multimetro,1,CC voltaje/corriente; fusible en entrada de corriente,Medir,250,multimetro digital fusible corriente,1
+Compartido,Fuente de banco,1,0-6 V; limite de corriente ajustable; verificar salida,Validar regulador,1200,fuente laboratorio regulable limite corriente,4
+Compartido,Cautin y soporte,1,Temperatura regulada; punta fina,Soldar,400,estacion soldadura regulable,1
+Compartido,Herramientas y proteccion,1,"Pinzas, pelacables, lentes; extractor de humo disponible",Construir,300,kit herramientas electronica lentes,1
+Compartido,Peluche y soporte,1,Sin animales; base para movimientos controlados,Ensayos,100,peluche perro,2
+Disponible,Computadora,1,USB y Arduino IDE 2.x; acceso a internet para instalar,Programar,0,equipo disponible no presupuestado,1
+Disponible,Telefono Android,1,BLE y nRF Connect; permisos de dispositivos cercanos,Consultar,0,telefono disponible no presupuestado,4
+Opcional,Motor y etapa,1,Motor 3 V + NMOS logic level + diodo + R100 + R100k + C100nF/100uF,Extension en banco,65,motor vibrador 3V MOSFET logic level,5
+Opcional,Fuente motor,1,3.0 V regulados; capacidad superior a corriente de arranque,Motor,90,fuente regulada 3V motor,5
+Opcional,Pull-ups I2C,2,4.7 kohm; solo si faltan o se retiran las de 5 V,I2C,1,resistencia 4.7k,2

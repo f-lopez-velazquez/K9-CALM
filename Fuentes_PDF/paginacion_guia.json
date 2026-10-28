@@ -1,0 +1,22 @@
+{
+  "K9 CALM": 1,
+  "Materiales: compra estas piezas": 2,
+  "Instala Arduino y selecciona la placa": 3,
+  "Instala las bibliotecas incluidas": 4,
+  "Los mismos pines en todo el curso": 5,
+  "01 / Luz y botón": 6,
+  "01 / Prueba y cambia": 7,
+  "02 / Medir movimiento": 8,
+  "02 / Prueba y cambia": 9,
+  "03 / Detectar un sonido": 10,
+  "03 / Prueba y cambia": 11,
+  "04 / Ver datos en el teléfono": 12,
+  "04 / Prueba y cambia": 13,
+  "05 / El detector completo": 14,
+  "05 / Prueba y cambia": 15,
+  "Opcional: medir un voltaje seguro": 16,
+  "Bluetooth: lee el estado en Android": 17,
+  "Prueba final: cuatro resultados": 18,
+  "¿La vibración debe ir en el pecho?": 19,
+  "Si no sale: revisa esto primero": 20
+}

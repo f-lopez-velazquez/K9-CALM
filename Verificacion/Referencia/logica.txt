@@ -1,0 +1,3 @@
+OK: FFT 500/4000Hz y silencio; E1/E2/E3; enfriamiento; manual; ADC e histeresis
+
+Prueba de funciones del codigo real en CPU anfitriona. No emula I2C/I2S/BLE ni hardware.

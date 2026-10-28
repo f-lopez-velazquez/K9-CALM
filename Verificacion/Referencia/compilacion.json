@@ -1,0 +1,32 @@
+[
+  {
+    "practica": 1,
+    "exit_code": 0,
+    "resultado": "Compilada correctamente",
+    "segundos": 6.9
+  },
+  {
+    "practica": 2,
+    "exit_code": 0,
+    "resultado": "Compilada correctamente",
+    "segundos": 12.5
+  },
+  {
+    "practica": 3,
+    "exit_code": 0,
+    "resultado": "Compilada correctamente",
+    "segundos": 12.1
+  },
+  {
+    "practica": 4,
+    "exit_code": 0,
+    "resultado": "Compilada correctamente",
+    "segundos": 25.3
+  },
+  {
+    "practica": 5,
+    "exit_code": 0,
+    "resultado": "Compilada correctamente",
+    "segundos": 24.2
+  }
+]

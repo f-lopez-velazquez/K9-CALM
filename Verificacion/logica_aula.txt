@@ -1,0 +1,3 @@
+OK: motor real de aula, FFT 500/4000Hz/silencio, E1/E2/E3, reposo, manual, ADC e histeresis.
+
+Sin emulacion de I2C, I2S o BLE ni hardware fisico.

@@ -1,0 +1,8 @@
+Name                    Installed Available Location Description
+Adafruit BusIO          1.17.4    -         user     -
+Adafruit GFX Library    1.13.0    -         user     -
+Adafruit MPU6050        2.2.9     -         user     -
+Adafruit SSD1306        2.5.17    -         user     -
+Adafruit Unified Sensor 1.1.15    -         user     -
+NimBLE-Arduino          2.5.2     -         user     -
+
